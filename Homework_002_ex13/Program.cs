@@ -5,12 +5,12 @@ Console.Clear();
 Console.WriteLine("Введите число : ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number / 100 == 0)
+if (number > 99)
 {
     Console.WriteLine("Третьей цифры нет");
 }
 else
 {
-    string strnumber3 = Convert.ToString(number);
-    Console.Write(strnumber3[2]);
+    string strNumber3 = Convert.ToString(number);
+    Console.Write(strNumber3[2]);
 }
