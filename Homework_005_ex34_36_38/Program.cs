@@ -5,12 +5,12 @@
 
 // int[] CreateRandomArray(int N, int start, int end)
 // {
-//     int[] RandomArray = new int[N];
+//     int[] randomArray = new int[N];
 //     for (int i = 0; i < N; i++)
 //     {
-//         RandomArray[i] = new Random().Next(start, end + 1);
+//         randomArray[i] = new Random().Next(start, end + 1);
 //     }
-//     return RandomArray;
+//     return randomArray;
 // }
 
 // int GetEvenInteger(int[] array)
@@ -23,7 +23,7 @@
 //     return result;
 // }
 
-// int[] array = CreateRandomArray(10, 99, 998);
+// int[] array = CreateRandomArray(10, 100, 999);
 // Console.WriteLine($"В массиве [{String.Join(", ", array)}] четных чисел {GetEvenInteger(array)}.");
 
 
@@ -34,12 +34,12 @@
 
 // int[] CreateRandomArray(int N, int start, int end)
 // {
-//     int[] RandomArray = new int[N];
+//     int[] randomArray = new int[N];
 //     for (int i = 0; i < N; i++)
 //     {
-//         RandomArray[i] = new Random().Next(start, end + 1);
+//         randomArray[i] = new Random().Next(start, end + 1);
 //     }
-//     return RandomArray;
+//     return randomArray;
 // }
 
 // int GetSumNumbersForOddIndex(int[] array)
@@ -63,12 +63,12 @@
 
 int[] CreateRandomArray(int N, int start, int end)
 {
-    int[] RandomArray = new int[N];
+    int[] randomArray = new int[N];
     for (int i = 0; i < N; i++)
     {
-        RandomArray[i] = new Random().Next(start, end + 1);
+        randomArray[i] = new Random().Next(start, end + 1);
     }
-    return RandomArray;
+    return randomArray;
 }
 
 void ShowArray(int[] array)
@@ -87,7 +87,7 @@ ShowArray(array);
 int max = array[0];
 int min = array[0];
 
-for (int i = 0; i < array.Length; i++)
+for (int i = 1; i < array.Length; i++)
 {
  if (array[i] > max)
     {
