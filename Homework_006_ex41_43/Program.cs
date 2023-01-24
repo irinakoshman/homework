@@ -38,27 +38,21 @@ Console.WriteLine($"Чисел больше нуля : {GetPositiveNumbers(array
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 Console.Clear();
-Console.WriteLine("Введите значение b1: ");
-int b1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите значение k1: ");
-int k1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите значение b2: ");
-int b2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите значение k2: ");
-int k2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Прямые пересекаются в точке {IntersectionLines(b1,k1,b2,k2)}.");
+Console.Write("Введите через пробел b1, k1, b2 , k2: ");
+string[] f = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+double b1 = double.Parse(f[0]);
+double k1 = double.Parse(f[1]);
+double b2 = double.Parse(f[2]);
+double k2 = double.Parse(f[3]);
+Console.WriteLine(String.Join(" ", GetPoint(b1, k1, b2, k2)));
 
-double IntersectionLines(int b1, int k1, int b2, int k2)
+double[] GetPoint(double inB1, double inK1, double inB2, double inK2)
 {
-    double x = 0;
-    double y = 0;
-    if (k1 == k2) Console.WriteLine("Прямые не пересекаются.");
-    else
-    {
-        x = (b1 - b2) / (k1 - k2);
-        y = (k1 * ((b1 - b2) / (k1 - k2))) + b1;
-    }
-    return x; y;
-    }
+double[] result = new double[2];
+result[0] = (inB2 - inB1) / (inK1 - inK2);
+result[1] = inK1 * result[0] + inB1;
+return result;
+}
+
 
 
